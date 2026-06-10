@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Plante | Transformando vidas • Desintoxicação 01 a 07 Junho</title>
+  <title>Plante | Transformando vidas • Desintoxicação 10 a 16 Agosto</title>
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bemestardojardim/Images/refs/heads/main/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -41,6 +41,7 @@
     @keyframes shimmer { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
     .hero-badge { background: rgba(255, 217, 102, 0.95); color: #1f4f2b; display: inline-block; padding: 8px 18px; border-radius: 60px; font-size: 0.75rem; font-weight: 800; margin-bottom: 20px; animation: fadeInUp 0.6s ease-out; }
     .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 12px; animation: fadeInUp 0.7s ease-out; }
+    .hero-subtitle { font-size: 1rem; font-weight: 400; margin-bottom: 16px; opacity: 0.95; animation: fadeInUp 0.75s ease-out; }
     .hero-date { font-size: 1rem; margin: 16px 0; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.8s ease-out; }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     .btn-whats { background: #25D366; color: white; display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 60px; text-decoration: none; font-weight: 700; font-size: 1rem; margin-top: 12px; transition: all 0.3s ease; border: none; cursor: pointer; }
@@ -58,10 +59,20 @@
     .pilar:hover { transform: translateY(-3px); background: rgba(255,255,255,0.98); }
     .pilar i { font-size: 1.8rem; color: #2c6e3c; margin-bottom: 8px; display: block; }
     .pilar h3 { font-size: 0.85rem; font-weight: 700; }
+    .tratamentos { background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(4px); border-radius: 24px; margin-bottom: 20px; overflow: hidden; }
+    .tratamentos-header { background: rgba(254, 246, 224, 0.95); padding: 12px 16px; text-align: center; border-bottom: 1px solid rgba(240,226,192,0.8); }
+    .tratamentos-header h4 { font-size: 0.9rem; font-weight: 700; color: #5a4a1a; }
+    .tratamentos-header i { color: #ffb347; }
+    .tratamentos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; }
+    @media (min-width: 600px) { .tratamentos-grid { grid-template-columns: repeat(4, 1fr); } }
+    .tratamento-categoria { background: white; border-radius: 16px; padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .tratamento-categoria h5 { font-size: 0.85rem; font-weight: 800; color: #1f4f2b; margin-bottom: 8px; border-left: 3px solid #ffb347; padding-left: 8px; }
+    .tratamento-categoria ul { list-style: none; padding: 0; }
+    .tratamento-categoria li { font-size: 0.7rem; padding: 4px 0; color: #4a5b44; display: flex; align-items: center; gap: 6px; }
+    .tratamento-categoria li i { font-size: 0.6rem; color: #ffb347; }
     .carrossel-area { background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(4px); border-radius: 24px; margin-bottom: 20px; overflow: hidden; }
     .carrossel-header { background: rgba(254, 246, 224, 0.95); padding: 12px 16px; text-align: center; border-bottom: 1px solid rgba(240,226,192,0.8); }
     .carrossel-header h4 { font-size: 0.9rem; font-weight: 700; color: #5a4a1a; }
-    .carrossel-header i { color: #ffb347; }
     .slider-container { position: relative; overflow: hidden; padding: 0; }
     .slider-track { display: flex; transition: transform 0.5s ease-in-out; }
     .slide { flex: 0 0 100%; scroll-snap-align: start; position: relative; }
@@ -86,60 +97,49 @@
     body.night-mode { background: #1a1a2e; }
     body.night-mode .bg-dynamic { background: linear-gradient(125deg, #16213e, #1a1a2e, #0f3460, #16213e, #1a1a2e); }
     body.night-mode .hero { background: linear-gradient(135deg, #0f3460, #16213e, #1a1a2e, #16213e, #0f3460); border: 1px solid rgba(100,150,200,0.3); }
-    body.night-mode .pilar, body.night-mode .carrossel-area, body.night-mode .post-destaque, body.night-mode .inscricao-area, body.night-mode footer { background: rgba(30, 30, 60, 0.92); border-color: rgba(100, 150, 200, 0.2); }
- 
+    body.night-mode .pilar, body.night-mode .carrossel-area, body.night-mode .post-destaque, body.night-mode .inscricao-area, body.night-mode footer, body.night-mode .tratamentos { background: rgba(30, 30, 60, 0.92); border-color: rgba(100, 150, 200, 0.2); }
+    body.night-mode .tratamento-categoria { background: rgba(30, 30, 60, 0.8); }
+    body.night-mode .tratamento-categoria h5 { color: #ffd966; }
+    body.night-mode .tratamento-categoria li { color: #ccc; }
     body.night-mode footer, body.night-mode footer p { color: #ccc; }
     body.night-mode footer i { color: #ffd966; }
-
     body.night-mode .pilar h3 { color: #e0e0e0; }
     body.night-mode .post-header span { color: #ffd966; }
     body.night-mode .inscricao-header h3 { color: #ffd966; }
- 
     body.night-mode .inscricao-area p { color: #ddd; }
     body.night-mode .inscricao-area p:first-of-type { color: #ffd966; }
-    body.night-mode .inscricao-area .btn-principal { background: linear-gradient(135deg, #ffb347, #ff8c00); color: white; }
-    body.night-mode .inscricao-area .btn-principal:hover { background: linear-gradient(135deg, #ffa01e, #e07800); }
+    body.night-mode .inscricao-area .btn-principal { background: linear-gradient(135deg, #ffb347, #ff8c00); color: #1e2f1c; }
     body.night-mode .inscricao-area .fa-lock { color: #ffd966; }
-
+    body.night-mode .btn-gigante { background: linear-gradient(135deg, #ffb347, #ff8c00); color: #1e2f1c; }
   </style>
 </head>
 <body>
-  <div class="loader-wrapper" id="loaderWrapper">
-    <div class="loader">
-      <i class="fas fa-leaf leaf"></i>
-      <p>Carregando Plante</p>
-      <div class="dots"><span></span><span></span><span></span></div>
-    </div>
-  </div>
+  <div class="loader-wrapper" id="loaderWrapper"><div class="loader"><i class="fas fa-leaf leaf"></i><p>Carregando Plante</p><div class="dots"><span></span><span></span><span></span></div></div></div>
   <div class="bg-dynamic"></div>
   <div class="particles" id="particles"></div>
-  <div class="waves-bottom">
-    <svg class="wave-svg" preserveAspectRatio="none" viewBox="0 0 1440 320">
-      <path class="wave-path" fill="rgba(44,110,60,0.25)" d="M0,160 C150,200 350,100 500,160 C650,220 800,130 1000,160 C1150,190 1300,170 1440,140 L1440,320 L0,320 Z"></path>
-      <path class="wave-path" fill="rgba(31,79,43,0.2)" d="M0,180 C150,140 350,220 500,170 C650,120 800,200 1000,180 C1150,160 1300,210 1440,160 L1440,320 L0,320 Z"></path>
-    </svg>
-  </div>
+  <div class="waves-bottom"><svg class="wave-svg" preserveAspectRatio="none" viewBox="0 0 1440 320"><path class="wave-path" fill="rgba(44,110,60,0.25)" d="M0,160 C150,200 350,100 500,160 C650,220 800,130 1000,160 C1150,190 1300,170 1440,140 L1440,320 L0,320 Z"></path><path class="wave-path" fill="rgba(31,79,43,0.2)" d="M0,180 C150,140 350,220 500,170 C650,120 800,200 1000,180 C1150,160 1300,210 1440,160 L1440,320 L0,320 Z"></path></svg></div>
 <div class="container">
   <div class="hero">
     <button id="nightModeBtn" style="position: fixed; bottom: 20px; right: 20px; background: #1f4f2b; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; z-index: 1000; font-size: 1.2rem;"><i class="fas fa-moon"></i></button>
     <div class="hero-badge"><i class="fas fa-leaf"></i> 7 dias de transformação</div>
     <h1>Transformando vidas</h1>
+    <div class="hero-subtitle">✨ Renove sua saúde, cuide do corpo, da mente e do espírito ✨</div>
     <div class="hero-date">
       <div style="margin: 25px 10px 15px;">
-        <a href="https://wa.me/5531986344300?text=Olá! Quero GARANTIR MINHA VAGA no retiro 'Transformando vidas' (01 a 07 de Junho)." class="btn-gigante">
+        <a href="https://wa.me/5531986344300?text=Olá! Quero GARANTIR MINHA VAGA no retiro 'Transformando vidas' (10 a 16 de Agosto)." class="btn-gigante">
           <i class="fas fa-ticket-alt"></i> 🎟️ GARANTIR MINHA VAGA AGORA
         </a>
       </div>
-      <i class="fas fa-calendar-alt"></i> <strong>01 a 07 de Junho</strong>
+      <i class="fas fa-calendar-alt"></i> <strong>10 a 16 de Agosto</strong>
       <span>| Online + Presencial</span>
     </div>
     <a href="https://wa.me/5531986344300?text=Olá! Quero mais informações sobre o retiro 'Transformando vidas'." class="btn-secundario">
       <i class="fab fa-whatsapp"></i> Falar com atendente
     </a>
-    <div class="contato-mini">
-      <i class="fab fa-whatsapp"></i> (31) 98634-4300 | @planteprojeto
-    </div>
+    <div class="contato-mini"><i class="fab fa-whatsapp"></i> (31) 98634-4300 | @planteprojeto</div>
   </div>
+
+  <!-- PILARES -->
   <div class="grid-2col">
     <div class="pilar"><i class="fas fa-seedling"></i><h3>Desintoxicação Orgânica</h3></div>
     <div class="pilar"><i class="fas fa-hand-holding-heart"></i><h3>Terapias Naturais</h3></div>
@@ -148,10 +148,55 @@
     <div class="pilar"><i class="fas fa-person-walking"></i><h3>Exercício físico</h3></div>
     <div class="pilar"><i class="fas fa-spa"></i><h3>Espiritualidade</h3></div>
   </div>
-  <div class="carrossel-area">
-    <div class="carrossel-header">
-      <h4><i class="fas fa-images"></i> Conheça o Projeto Plante</h4>
+
+  <!-- TRATAMENTOS DETALHADOS -->
+  <div class="tratamentos">
+    <div class="tratamentos-header">
+      <h4><i class="fas fa-spa"></i> Tratamentos inclusos no retiro</h4>
     </div>
+    <div class="tratamentos-grid">
+      <div class="tratamento-categoria">
+        <h5><i class="fas fa-water"></i> Hidroterapias</h5>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Banhos alternados</li>
+          <li><i class="fas fa-check-circle"></i> Banho vital</li>
+          <li><i class="fas fa-check-circle"></i> Escalda pés</li>
+          <li><i class="fas fa-check-circle"></i> Desintoxicação do fígado</li>
+        </ul>
+      </div>
+      <div class="tratamento-categoria">
+        <h5><i class="fas fa-brush"></i> Terapias Corporais</h5>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Escovação do corpo</li>
+          <li><i class="fas fa-check-circle"></i> Inalação</li>
+          <li><i class="fas fa-check-circle"></i> Sauna</li>
+          <li><i class="fas fa-check-circle"></i> Esfoliação</li>
+        </ul>
+      </div>
+      <div class="tratamento-categoria">
+        <h5><i class="fas fa-leaf"></i> Geoterapia & Hortoterapia</h5>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Hortoterapia</li>
+          <li><i class="fas fa-check-circle"></i> Geoterapia</li>
+          <li><i class="fas fa-check-circle"></i> Máscara de argila verde</li>
+          <li><i class="fas fa-check-circle"></i> Máscara de dolomita</li>
+        </ul>
+      </div>
+      <div class="tratamento-categoria">
+        <h5><i class="fas fa-hand-sparkles"></i> Estética & Relaxamento</h5>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Esfoliação completa</li>
+          <li><i class="fas fa-check-circle"></i> Massagem relaxante</li>
+          <li><i class="fas fa-check-circle"></i> Terapias naturais</li>
+          <li><i class="fas fa-check-circle"></i> Bem-estar integral</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARROSSEL -->
+  <div class="carrossel-area">
+    <div class="carrossel-header"><h4><i class="fas fa-images"></i> Conheça o Projeto Plante</h4></div>
     <div class="slider-container">
       <button class="slider-btn btn-prev" id="btnPrev"><i class="fas fa-chevron-left"></i></button>
       <div class="slider-track" id="sliderTrack">
@@ -161,10 +206,10 @@
       </div>
       <button class="slider-btn btn-next" id="btnNext"><i class="fas fa-chevron-right"></i></button>
     </div>
-    <div class="slider-dots" id="sliderDots">
-      <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
-    </div>
+    <div class="slider-dots" id="sliderDots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
   </div>
+
+  <!-- INSTAGRAM -->
   <div class="post-destaque">
     <div class="post-header"><i class="fab fa-instagram"></i><span>📌 Destaque do Instagram</span></div>
     <div id="embedPostContainer" class="embed-container">
@@ -172,85 +217,45 @@
       <script async src="//www.instagram.com/embed.js"></script>
     </div>
   </div>
+
+  <!-- INSCRIÇÃO -->
   <div class="inscricao-area">
     <div class="inscricao-header">
       <h3><i class="fab fa-whatsapp"></i> 🎟️ Garanta sua vaga agora</h3>
       <p style="font-size: 0.9rem;">🌿 Vagas limitadas • Certificado de participação • 7 dias de transformação</p>
       <p style="margin-top: 12px; background: rgba(255,217,102,0.3); padding: 12px; border-radius: 20px; font-size: 0.85rem;">
         <i class="fas fa-check-circle"></i> Inclui: alimentação, hospedagem (para presencial),<br>
-        materiais exclusivos e acompanhamento com especialistas.
+        todos os tratamentos acima e acompanhamento com especialistas.
       </p>
     </div>
     <div style="text-align: center; margin-top: 24px;">
-      <a href="https://wa.me/5531986344300?text=Olá! Quero GARANTIR MINHA VAGA no retiro 'Transformando vidas' (01 a 07 de Junho)." class="btn-principal" style="font-size: 1.3rem; padding: 18px 40px;">
+      <a href="https://wa.me/5531986344300?text=Olá! Quero GARANTIR MINHA VAGA no retiro 'Transformando vidas' (10 a 16 de Agosto)." class="btn-principal" style="font-size: 1.3rem; padding: 18px 40px;">
         <i class="fas fa-ticket-alt"></i> 🎟️ GARANTIR MINHA VAGA
       </a>
-      <p style="margin-top: 16px; font-size: 0.7rem;">
-        <i class="fas fa-lock"></i> Seus dados estão seguros. Entraremos em contato rapidamente.
-      </p>
+      <p style="margin-top: 16px; font-size: 0.7rem;"><i class="fas fa-lock"></i> Seus dados estão seguros. Entraremos em contato rapidamente.</p>
     </div>
   </div>
+
   <footer>
     <i class="fas fa-heart"></i> Projeto Plante · Transformando vidas · (31) 98634-4300
-    <p>01 a 07 de Junho · Desintoxicação e bem-estar</p>
+    <p>10 a 16 de Agosto · Desintoxicação e bem-estar</p>
   </footer>
 </div>
 <script>
-  function createParticles() {
-    const container = document.getElementById('particles');
-    if(!container) return;
-    for(let i=0;i<35;i++) {
-      const p = document.createElement('div');
-      p.classList.add('particle');
-      let s = Math.random()*30+10;
-      p.style.width = s+'px'; p.style.height = s+'px';
-      p.style.left = Math.random()*100+'%';
-      p.style.animationDuration = Math.random()*15+10+'s';
-      p.style.animationDelay = Math.random()*20+'s';
-      p.style.opacity = Math.random()*0.4+0.1;
-      container.appendChild(p);
-    }
-  }
+  function createParticles() { const container = document.getElementById('particles'); if(!container) return; for(let i=0;i<35;i++) { const p = document.createElement('div'); p.classList.add('particle'); let s = Math.random()*30+10; p.style.width = s+'px'; p.style.height = s+'px'; p.style.left = Math.random()*100+'%'; p.style.animationDuration = Math.random()*15+10+'s'; p.style.animationDelay = Math.random()*20+'s'; p.style.opacity = Math.random()*0.4+0.1; container.appendChild(p); } }
   createParticles();
-  window.addEventListener("load", function() {
-    const loader = document.getElementById("loaderWrapper");
-    if(loader) {
-      setTimeout(function() {
-        loader.classList.add("hide");
-        setTimeout(function() { loader.style.display = "none"; }, 500);
-      }, 800);
-    }
-  });
-  let currentSlide = 0;
-  const totalSlides = 3;
-  const track = document.getElementById('sliderTrack');
-  const dots = document.querySelectorAll('.dot');
+  window.addEventListener("load", function() { const loader = document.getElementById("loaderWrapper"); if(loader) { setTimeout(function() { loader.classList.add("hide"); setTimeout(function() { loader.style.display = "none"; }, 500); }, 800); } });
+  let currentSlide = 0, totalSlides = 3, track = document.getElementById('sliderTrack'), dots = document.querySelectorAll('.dot');
   function updateSlide() { if(track) track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)'; dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide)); }
   function nextSlide() { currentSlide = (currentSlide + 1) % totalSlides; updateSlide(); }
   function prevSlide() { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateSlide(); }
-  document.getElementById('btnNext')?.addEventListener('click', nextSlide);
-  document.getElementById('btnPrev')?.addEventListener('click', prevSlide);
+  document.getElementById('btnNext')?.addEventListener('click', nextSlide); document.getElementById('btnPrev')?.addEventListener('click', prevSlide);
   dots.forEach((dot, i) => dot.addEventListener('click', () => { currentSlide = i; updateSlide(); }));
   let autoInterval = setInterval(nextSlide, 5000);
   const sliderContainer = document.querySelector('.slider-container');
-  if(sliderContainer) {
-    sliderContainer.addEventListener('mouseenter', () => clearInterval(autoInterval));
-    sliderContainer.addEventListener('mouseleave', () => { autoInterval = setInterval(nextSlide, 5000); });
-  }
+  if(sliderContainer) { sliderContainer.addEventListener('mouseenter', () => clearInterval(autoInterval)); sliderContainer.addEventListener('mouseleave', () => { autoInterval = setInterval(nextSlide, 5000); }); }
   const nightBtn = document.getElementById('nightModeBtn');
-  if(nightBtn) {
-    const body = document.body;
-    if(localStorage.getItem('nightMode') === 'true') {
-      body.classList.add('night-mode');
-      nightBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-    nightBtn.addEventListener('click', () => {
-      body.classList.toggle('night-mode');
-      const isNight = body.classList.contains('night-mode');
-      localStorage.setItem('nightMode', isNight);
-      nightBtn.innerHTML = isNight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    });
-  }
+  if(nightBtn) { const body = document.body; if(localStorage.getItem('nightMode') === 'true') { body.classList.add('night-mode'); nightBtn.innerHTML = '<i class="fas fa-sun"></i>'; } nightBtn.addEventListener('click', () => { body.classList.toggle('night-mode'); const isNight = body.classList.contains('night-mode'); localStorage.setItem('nightMode', isNight); nightBtn.innerHTML = isNight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>'; }); }
 </script>
 </body>
 </html>
